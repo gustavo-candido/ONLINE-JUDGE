@@ -1,0 +1,62 @@
+1- select * from gravadora
+where id_gravadora NOT in (
+select id_gravadora from banda
+);
+
+2- select nome_banda from banda
+where id_banda in (
+select id_banda from mhb
+group by id_banda
+HAVING count (id_musico)=1
+);
+
+3- select nome, instrumento from membros
+where id_musico in (
+select id_musico from mhb where id_banda
+IN (
+select id_banda from banda
+where nome_banda LIke '%prigoticos'
+)
+);
+
+4- select nome_banda from banda
+where id_banda in (
+select id_banda from festival
+where nome = 'eneagono music'
+) AND 
+id_banda in (
+select id_banda from festival
+where nome = 'tuts tuts gostoso'
+) ;
+
+5-select nome_banda from banda
+where id_banda
+in (
+select id_banda from cd
+where nome_cd IN(
+select  nome_cd from musica
+group by nome_cd
+having count ( nome_musica ) >1
+)
+)
+
+6-
+
+7- select nome from membros
+where id_musico in (
+select id_musico from mhb
+group by id_musico
+having count (id_banda) >1
+);
+
+8 - select nome from membros
+where id_musico in (
+select id_musico from mhb
+where id_banda IN (
+select id_banda from cd
+where nome_cd IN (
+select nome_cd from musica
+where nome_cd = nome_musica
+)
+)
+); 

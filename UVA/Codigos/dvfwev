@@ -1,0 +1,4 @@
+SELECT m.id_musico, B.id_banda from banda b, membros m, mhb x
+WHERE B.id_BANDA = x.id_banda AND x.id_musico = m.id_musico 
+GROUP BY b.nome_banda
+HAVING COUNT(x.id_musico) > 1

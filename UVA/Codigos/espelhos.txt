@@ -1,0 +1,27 @@
+Marcos é um garoto de desde sua infância era considerado como um narcisista(pessoas viciadas em sí mesmas então amam espelhos) pois sempre
+andava junto de um espelho. O que ninguém sabe é que na verdade Marcos quando tinha poucos anos de idade pegou 'emprestado' de seu avô um espelho que a princípio
+não demonstra nenhuma diferença porém quando é apontado para números ele é capaz de inverter a ordem de seus números sem inverter seus dígitos, por exemplo
+o reflexo do número 12,42,666 no espelho é exatamente 21,24,666 respectivamente e quando o reflexo e o número são iguais o espelho avisa dizendo que os números são palindromos.
+Marcos adora essa propriedade do espelho mas odeia que as pessoas pensem que ele é narcisista, como você é um dos amigos de Marcos prometeu ajuda-lo criando 
+um pequeno programa que ao digitar um número mostre seu inverso e caso sejam iguais diga que é um palindromo.
+
+ENTRADA
+    A entrada possui vários casos de teste. Cada caso de teste contém um único número N(1 <= N <= 10^1000) que é o número que Marcos quer ver ao contrário.
+    
+SAÍDA
+	A saída deve conter o número N invertido, caso seu valor seja igual ao de N a palavra "PALINDROMO." deve ser mostrada.
+	
+Ex. Entrada
+
+12
+42 
+666
+123456789009876543211234567890
+
+Ex. Saida
+
+21
+24
+666
+PALINDROMO
+098765432112345678900987654321
